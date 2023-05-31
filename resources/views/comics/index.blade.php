@@ -5,10 +5,10 @@
 @endsection
 
 @section('content')
-    <h2 class="text-center py-3">Lista completa dei nostri <em>DC COMICS</em></h2>
+    <h2 class="text-center py-3 cursor-pointer">Lista completa dei nostri <em>DC COMICS</em></h2>
 
     <div class="container">
-        <table class="table table-dark table-striped">
+        <table class="table table-dark table-striped cursor-pointer">
             <thead>
               <tr>
                 <th scope="col">ID</th>
@@ -23,7 +23,7 @@
                     <th scope="row">{{ $comic->id }}</th>
                     <td>{{ $comic->title }}</td>
                     <td>{{ $comic->series }}</td>
-                    <td><button>👁</button></td>
+                    <td><button class="btn btn-primary">👁</button></td>
                 </tr>
               @endforeach
             </tbody>

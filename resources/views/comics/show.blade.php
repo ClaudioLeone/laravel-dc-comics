@@ -6,7 +6,7 @@
 
 @section('content')
     <div class="container">
-        <div class="card" style="width: 100%;">
+        <div class="card ms-card">
             <img class="card-img-top" src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
             <div class="card-body">
               <h5 class="card-title">{{ $comic->title }}</h5>
@@ -18,8 +18,13 @@
               <li class="list-group-item">Price: <em><b>{{ $comic->price }}</b></em></li>
             </ul>
             <div class="card-body">
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
+              <button type="button" class="btn btn-primary">
+                <a href="{{ $comic->thumb }}" class="card-link">VIEW IMAGE</a>
+              </button>
+              
+              <button type="button" class="btn btn-success">
+                <a href="#" class="card-link">PURCHASE</a>
+              </button>
             </div>
         </div>
     </div>

@@ -30,5 +30,9 @@
               @endforeach
             </tbody>
         </table>
+
+        <div class="create-page-btn">
+          <button class="btn"><a href="{{ route('comics.create') }}">Aggiungi un DC Comic</a></button>
+        </div>
     </div>
 @endsection

@@ -5,13 +5,13 @@
 @endsection
 
 @section('content')
-    <h2 class="text-center py-3 cursor-pointer">Lista completa dei nostri <em>DC COMICS</em></h2>
+    <h2 class="text-center py-4 cursor-pointer">Lista completa dei nostri <em>DC COMICS</em></h2>
 
     <div class="container">
         <table class="table table-dark table-striped cursor-pointer">
             <thead>
               <tr>
-                <th scope="col">ID</th>
+                <th scope="col">Cover</th>
                 <th scope="col">Titolo</th>
                 <th scope="col">Serie</th>
                 <th scope="col">Azioni</th>
@@ -20,10 +20,12 @@
             <tbody>
               @foreach ($comics as $comic)
                 <tr>
-                    <th scope="row">{{ $comic->id }}</th>
+                    <th scope="row">
+                      <img class="thumbs" src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
+                    </th>
                     <td>{{ $comic->title }}</td>
                     <td>{{ $comic->series }}</td>
-                    <td><button class="btn btn-primary">👁</button></td>
+                    <td><button class="btn btn-primary"><a href="{{ route('comics.show', $comic->id) }}">👁</a></button></td>
                 </tr>
               @endforeach
             </tbody>

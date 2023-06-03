@@ -51,7 +51,7 @@
             </div>
             
             <div class="btn-container">
-                <button type="submit" class="btn btn-success ms-add-btn"><a href=""><i class="fa-solid fa-plus btn-icons"></i></a></button>
+                <button type="submit" class="btn btn-success ms-add-btn"><a href="{{ route('comics.index') }}"><i class="fa-solid fa-plus btn-icons"></i></a></button>
             </div>              
         </form>
     </div>

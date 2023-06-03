@@ -8,13 +8,13 @@
     <h2 class="text-center py-4 cursor-pointer">Lista completa dei nostri <em>DC COMICS</em></h2>
 
     <div class="container">
-        <table class="table table-dark table-striped cursor-pointer">
+        <table class="table table-dark table-striped cursor-pointer table-fixed">
             <thead>
               <tr>
-                <th scope="col">Cover</th>
-                <th scope="col">Titolo</th>
-                <th scope="col">Serie</th>
-                <th scope="col">Azioni</th>
+                <th>Cover</th>
+                <th>Titolo</th>
+                <th>Serie</th>
+                <th>Azioni</th>
               </tr>
             </thead>
             <tbody>
@@ -25,7 +25,10 @@
                     </th>
                     <td>{{ $comic->title }}</td>
                     <td>{{ $comic->series }}</td>
-                    <td><button class="btn btn-primary"><a href="{{ route('comics.show', $comic->id) }}">👁</a></button></td>
+                    <td>
+                      <button class="btn btn-primary"><a href="{{ route('comics.show', $comic->id) }}"><i class="fa-solid fa-eye"></i></a></button>
+                      <button class="btn btn-warning"><a href="{{ route('comics.edit', $comic->id) }}"><i class="fa-solid fa-pencil"></i></a></button>  
+                    </td>
                 </tr>
               @endforeach
             </tbody>

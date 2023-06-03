@@ -26,8 +26,25 @@
                     <td>{{ $comic->title }}</td>
                     <td>{{ $comic->series }}</td>
                     <td>
-                      <button class="btn btn-primary"><a href="{{ route('comics.show', $comic->id) }}"><i class="fa-solid fa-eye"></i></a></button>
-                      <button class="btn btn-warning"><a href="{{ route('comics.edit', $comic->id) }}"><i class="fa-solid fa-pencil"></i></a></button>  
+                      <button class="btn btn-primary">
+                        <a href="{{ route('comics.show', $comic->id) }}">
+                          <i class="fa-solid fa-eye"></i>
+                        </a>
+                      </button>
+
+                      <button class="btn btn-warning my-1">
+                        <a href="{{ route('comics.edit', $comic->id) }}">
+                          <i class="fa-solid fa-pencil"></i>
+                        </a>
+                      </button>
+
+                      <form action="{{ route('comics.destroy', $comic->id) }}" method="post">
+                        @csrf
+                        @method('DELETE')
+                        <button class="btn btn-danger" type="submit">
+                          <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                      </form>
                     </td>
                 </tr>
               @endforeach

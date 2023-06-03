@@ -10,7 +10,8 @@
     <div class="container">
         <button class="btn btn-danger ms-btn ms-bwd-btn"><a href="{{ route('comics.index') }}"><i class="fa-solid fa-backward btn-icons"></i></a></button>
 
-        <form action="{{ route('comics.store') }}" method="POST">
+        <form action="{{ route('comics.update', $comic->id) }}" method="POST">
+            @method('PUT')
             @csrf
             <div class="mb-3">
                 <label for="title" class="form-label">Titolo: </label>

@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('title')
-    DC-COMICS-LIST
+    DC-COMICS-HOME
 @endsection
 
 @section('content')
-    <h1 id="h1">HOME PAGE</h1>
+    <h1 class="text-center" id="h1">HOME PAGE</h1>
 @endsection

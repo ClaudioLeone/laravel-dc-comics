@@ -52,7 +52,7 @@
             </div>
             
             <div class="btn-container">
-                <button type="submit" class="btn btn-warning ms-modify-btn"><a href="{{ route('comics.index') }}"><i class="fa-solid fa-pencil btn-icons"></i></a></button>
+              <a href="{{ route('comics.index') }}"><button type="submit" class="btn btn-warning ms-modify-btn"><i class="fa-solid fa-pencil btn-icons"></i></button></a>
             </div>              
         </form>
     </div>

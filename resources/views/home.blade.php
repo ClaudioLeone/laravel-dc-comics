@@ -17,6 +17,7 @@
         </form>
 
         <form style="width: 45%" action="{{ route('comics.index') }}">
+            @csrf
             <button type="submit" class="btn btn-success ms-to-list-btn">Registrati</button>
         </form>
     </div>
